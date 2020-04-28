@@ -12,7 +12,7 @@
   const send = async e => {
     try {
       isLoading = true;
-      let response = await fetch("http://localhost:4001/api/auth/send", {
+      let response = await fetch("https://sls-cus-dev-api.azurewebsites.net/api/auth/send", {
         method: "POST",
         body: JSON.stringify({ email }),
         headers: {
@@ -35,7 +35,8 @@
   const verify = async e => {
     try {
       isLoading = true;
-      let response = await fetch("http://localhost:4001/api/auth/verify", {
+/*       let response = await fetch("http://localhost:4001/api/auth/verify", {
+ */      let response = await fetch("https://sls-cus-dev-api.azurewebsites.net/api/auth/verify", {
         method: "POST",
         body: JSON.stringify({ email, code }),
         headers: {
