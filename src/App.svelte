@@ -98,6 +98,10 @@
       return number ? `${number}${type} ` : "";
     }
   };
+
+  const reset = e => {
+    isVerify = false;
+  }
 </script>
 
 <style>
@@ -181,7 +185,7 @@
 		 
 	{:else}
 		<p > Thansk for verify your email!</p>
-		<Button on:click={isVerify = false} text="Repear process" />
+		<Button on:click={reset} text="Repear process" />
 	{/if}
 
 </main>
